@@ -3,6 +3,10 @@ import ccxt
 import os
 
 app = Flask(__name__)
+@app.route("/")
+def home():
+  return "البوت شغال وجاهز لاستقبال الويب هوك بنجاح!"
+
 
 exchange = ccxt.binance({
     'apiKey': os.environ.get('BINANCE_API_KEY'),
